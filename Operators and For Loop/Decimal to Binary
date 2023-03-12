@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+	// Write your code here
+	long int n,x=0,c,i=1,k=1,a=0,j=0;
+    cin>>n;
+    long int h=n;
+    while(n!=0)
+    {
+        x++;
+        n/=2;
+    }
+    
+    while(i<=x)
+    {
+        
+        c=h%2;
+        c=c*k;
+        j=c+a;
+        a=j;
+       // cout<<j;
+        k=k*10;
+        h/=2;
+        i++;
+    }
+    
+    cout<<j;
+    return 0;
+}
