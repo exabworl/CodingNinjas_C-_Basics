@@ -1,0 +1,34 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+	// Write your code here
+  double t,b,h,d,a,p,v;
+  int x,z,w;
+    char g;
+    cin>>b>>g;
+    h=20.0*b/100;
+    d=50.0*b/100;
+    p=11.0*b/100;
+    if(g=='A')
+        a=1700;
+    else if(g=='B')
+        a=1500;
+    else
+        a=1300;
+    t=b+h+d+a-p;
+    x=t;
+    
+    v=(t-x)*10;
+    z=v;
+    w=t;
+    if(z>=5)
+    {
+    w=w+1;
+    cout<<w<<endl;
+    }
+    else
+    cout<<w<<endl;
+    
+    return 0;
+}
