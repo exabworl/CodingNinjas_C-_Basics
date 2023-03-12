@@ -1,0 +1,49 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+
+    /* Read input as specified in the question.
+	 * Print output as specified in the question.
+	 */
+   // 
+    char c,ch=' ';
+     //c=cin.get();
+     int c1=0,c2=0,c3=0;
+     while(c!='$')
+    {
+        c=cin.get();
+        int n=1;
+        
+        while(n<=26)
+        {
+            
+            if(c=='a'+n-1)
+            {
+                c1++;
+            }
+              if(c==('0'+n-1)&&n<=10)
+            {
+                c3++;
+                //cout<<c2<<" ";
+            }
+                if((c==ch||c=='\n'||c=='\t')&&n==1) 
+            {
+                c2++;
+                //cout<<c3<<" ";
+            }
+        
+
+           
+            n++;
+        }
+               
+            
+    }
+  
+ cout<<c1<<" "<<c3<<" "<<c2;
+return 0;
+  
+}
+
+
