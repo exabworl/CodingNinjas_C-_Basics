@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+    /* Read input as specified in the question.
+     * Print output as specified in the question.
+     */
+    int n,arr[100000];
+    cin>>n;
+    for(int i=0;i<n;i++)
+    {
+        cin>>arr[i];
+    }
+    for(int i=1;i<=n;i++)
+    {
+        arr[i]=arr[i]+arr[i-1];
+    }
+    cout<<arr[n];
+    return 0;
+}
+
+
