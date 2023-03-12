@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+        /*
+        *  Write your code here. 
+         *  Read input as specified in the question.
+         *  Print output as specified in the question.
+        */
+    int n,sum,k,f1=0,f2=1,sum1,f3;
+    cin>>n;
+    for(int j=0;j<n-1;j++)
+    {
+        
+        f3=f1+f2;
+        f1=f2;
+        f2=f3;
+       // f3=f1;
+       // cout<<f2<<endl;
+       // sum=f1+f2;
+       // f1=sum;
+      //  cout<<f1<<endl;
+        
+        
+    }   
+    if(n>0)
+    cout<<f2;
+    else if(n==0)
+        cout<<n;
+    return 0;
+        
+}
