@@ -1,0 +1,87 @@
+/*
+You can use minimum value of integer as -2147483647 and 
+maximum value of integer as 2147483647
+*/
+void findLargest(int **input, int nRows, int mCols)
+{
+    //Write your code here
+   /* int m=nRows,n=mCols,arr1[m*n],max1=0,k1=0,max2=0,k2=0,arr[m][n];
+    if(n==0&&m==0)
+    cout<<"row 0 -2147483648";
+    else
+    {
+       for(int i=0;i<m;i++)
+    {
+        for(int k=0;k<n;k++)
+        {
+            arr[i][k]=input[i][k];
+        }
+    }
+     for(int i=0;i<n;i++)
+    {
+        for(int k=0;k<m-1;k++)
+        {
+            int temp;
+            temp=arr[k+1][i];
+            arr[k+1][i]=temp+arr[k][i];
+        }
+         arr1[i]=arr[m-1][i];
+    }
+     for(int i=0;i<m;i++)
+    {
+        for(int k=0;k<n-1;k++)
+        {
+            int temp;
+            temp=input[i][k+1];
+            input[i][k+1]=temp+input[i][k];
+        }
+         arr1[i+n]=input[i][n-1];
+    }
+     for(int i=0,j=0;i<n-1;i++)
+    {
+       
+         if(arr1[i]>=arr1[i+1])
+         { max1=arr1[i],k1=j,arr1[i+1]=max1;}
+         else
+         {max1=arr1[i+1],k1=i+1,arr1[i]=max1,j++;}
+    }
+    for(int i=n,j=0;i<m+n-1;i++)
+    {
+       
+         if(arr1[i]>=arr1[i+1])
+         {max2=arr1[i],k2=j,arr1[i+1]=max2;}
+         else
+         {max2=arr1[i+1],k2=i-n+1,arr1[i]=max2,j++;}
+    }
+    if(max1<=max2&&m!=0)
+  cout<<"row "<<k2<<" "<<max2;
+    else
+  cout<<"column "<<k1<<" "<<max1;
+    }*/
+    int maxSum=INT32_MIN, index=0;
+  int *arr=new int[mCols], flag=0;
+  // Flag -> 0 rows, Flag -> 1 cols
+  
+  for(int i=0; i<nRows; i++) {
+    int sum=0;
+    for(int j=0; j<mCols; j++) {
+      sum+=input[i][j];
+      arr[j]+=input[i][j];
+    }
+    if(sum>maxSum) {
+      maxSum=sum;
+      index=i;
+    }
+  }
+  
+  for(int i=0;i<mCols;i++) {
+    if(arr[i]>maxSum) {
+      maxSum=arr[i];
+      index=i;
+      flag=1;
+    }
+  }
+  
+  flag ? cout<<"column "<<index<<" "<<maxSum<<endl :
+    cout<<"row "<<index<<" "<<maxSum<<endl;
+}
