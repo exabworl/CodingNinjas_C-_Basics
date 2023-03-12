@@ -1,0 +1,75 @@
+void merge(int *arr1, int size1, int *arr2, int size2, int *ans)
+{
+    //Write your code here
+   /* int i=0,j=0,k=0,size=size1-size2;
+    while(i<size1+size2-size)
+    {
+        while(k<size1)
+    {
+  if(arr1[k]>arr2[i-j])
+  {
+      ans[i]=arr2[i-j];
+      i++;
+      break;
+  }
+  else
+  {
+      ans[i]=arr1[k];
+      k++;
+      i++;
+      j++;
+      break;
+  }
+    }
+    }
+    while(i<size2)
+    {
+        while(k<size2)
+    {
+  if(arr1[k]>arr2[i-j])
+  {
+      ans[i]=arr2[i-j];
+      i++;
+      break;
+  }
+  else
+  {
+      ans[i]=arr1[k];
+      k++;
+      i++;
+      j++;
+      break;
+  }
+    }
+    }
+    //if(size1>size2)
+    //ans[size1+size2-1]=
+    */
+    int i = 0, j = 0, k = 0;
+ if(size1==0&&size2==0)
+ return;
+ else if(size1==0)
+ {
+     for(int i=0;i<size2;i++)
+     ans[i]=arr2[i];
+     return;
+ } 
+ else if (size2 == 0) {
+   for (int i = 0;i < size1; i++)
+     ans[i] = arr1[i];
+   return;
+ }
+
+    while(i<size1+size2)
+    {
+      if (arr1[j] > arr2[k]&&k<size2) {
+        ans[i++] = arr2[k];
+        k++;
+      }
+      else if(j<size1){
+        ans[i++] = arr1[j];
+        j++;
+      }
+    }
+}
+   
