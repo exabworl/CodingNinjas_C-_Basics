@@ -1,0 +1,69 @@
+string getCompressedString(string &input) {
+    // Write your code here.
+ /*int k=0,c=0,count[1000],i=0,j=0,p=0,x=0,l=0;
+    for(int n=0;input[n]!='\0';n++)
+            l++;
+    if(input[0]==NULL)
+        return NULL;
+    char arr[255],arr2[255];
+   for(i=j;i<l;i++)
+   {
+       c=0;
+       if(input[i]==input[i+1])
+       {
+       for(j=i;input[j]==input[j+1];j++)
+       {
+       // c=1;  
+   i=j+1;
+    c++;
+       }
+           count[k++]=c+1;
+           
+           arr[p++]=input[i];
+       }
+       else
+       {
+           c=1;
+           count[k++]=c;
+           arr[p++]=input[i];
+       }
+        
+    }
+for(int o=0,r=0;o<k+p;o=o+2,r++)
+    {
+        input[o]=arr[r];
+    arr2[r]='0'+count[r];
+    input[o+1]=arr2[r];
+    //if(r==k-1)
+      //  break;
+    }
+    x=p;
+    for(int r=0;r<k+x;r++)
+    {
+       if(input[r]=='0'+1)
+       {
+           for(int y=r;y<k+x;y++)
+           input[y]=input[y+1];
+           x--;
+       }
+    }
+     for(int r=0;r<k+x;r++)
+    arr[r]=input[r];
+    if(l>k+p)
+        arr[k+x]=NULL;
+    return arr;*/
+    string s="";
+    for(int i=0;i<=input.length()-1;i++)
+    {
+        int count=1;
+        for(int j=i;j<=input.length()&&input[j]==input[j+1];j++)
+        {
+            count++;
+            i++;
+        }
+        s.push_back(input[i]);
+        if(count>1)
+        s.push_back(count+'0');
+    }
+    return s;
+}
