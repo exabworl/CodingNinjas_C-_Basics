@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+
+
+int main(){
+
+       /*  Read input as specified in the question.
+	* Print output as specified in the question.
+	*/
+       int n,i=1,j;
+    cin>>n;
+    while(i<=n)
+    {
+        
+        j=n;
+        int k=n-i+1;
+        while(j>=i)
+        {
+            cout<<k;
+            j--;
+        }
+        cout<<endl;
+            i++;
+        
+    }
+    return 0;
+  
+}
+
+
