@@ -1,0 +1,41 @@
+void sumOfTwoArrays(int *input1, int size1, int *input2, int size2, int *output)
+{
+    //Write your code here
+    int temp,arr[100000],arr1[100000],x=0,n;
+    if(size1>size2)
+        n=size1;
+    else
+        n=size2;
+    for(int i=0,j=size1-1;i<j;i++,j--)
+    {
+    temp=input1[i];
+    input1[i]=input1[j];
+    input1[j]=temp;
+    }
+    for(int i=0,j=size2-1;i<j;i++,j--)
+    {
+    temp=input2[i];
+    input2[i]=input2[j];
+    input2[j]=temp;
+    }
+    for(int i=0;i<=n;i++)
+        arr[i]=input1[i]+input2[i];
+    
+    for(int i=0;i<=n;i++)
+    {
+        arr1[i]=(arr[i]+x)%10;
+        x=(arr[i]+x)/10;
+        //arr1[n]=x;
+    }
+    //x=arr[n]/10;
+    //arr1[n]=(arr1[n]+x);
+    for(int i=0,j=n;i<j;i++,j--)
+    {
+    temp=arr1[i];
+    arr1[i]=arr1[j];
+    arr1[j]=temp;
+    }
+    for(int i=0;i<=n;i++)
+        output[i]=arr1[i];
+    
+}
