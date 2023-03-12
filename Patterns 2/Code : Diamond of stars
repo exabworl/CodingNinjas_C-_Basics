@@ -1,0 +1,65 @@
+#include<iostream>
+using namespace std;
+
+
+int main() {
+    
+    /*  Read input as specified in the question.
+     * Print output as specified in the question.
+     */
+       int n,i=1,j,w;
+    cin>>n;
+    w=(n+1)/2;
+    while(i<=w)
+    {
+        j=i;
+        while(w>j)
+        {
+            cout<<" ";
+            j++;
+        }
+        j=1;
+        int k=1;
+        while(j<=i)
+        {
+            cout<<"*";
+            j++;
+        }
+        j=1;
+        while(j<i)
+        {
+            cout<<"*";
+            j++;
+        }
+        cout<<endl;
+            i++;
+        
+    }
+    i=1;
+    while(i<w)
+    {
+        j=1;
+        while(j<=i)
+        {
+            cout<<" ";
+            j++;
+        }
+        j=i;
+        while(j<w)
+        {
+            cout<<"*";
+            j++;
+        }
+        j=i;
+        while(j<w-1)
+        {
+            cout<<"*";
+            j++;
+        }
+        cout<<endl;
+            i++;
+        
+    }
+    return 0;
+    
+}
