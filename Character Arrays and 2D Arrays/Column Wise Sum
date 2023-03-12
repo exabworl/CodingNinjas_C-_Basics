@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+
+
+int main(){
+
+       /*  Read input as specified in the question.
+	* Print output as specified in the question.
+	*/int m,n,arr[10000][10000],arr1[1000];
+    cin>>m>>n;
+    for(int i=0;i<m;i++)
+    {
+        for(int j=0;j<n;j++)
+            cin>>arr[i][j];
+    }
+     for(int i=0;i<n;i++)
+    {
+        for(int j=0,k=0;j<m,k<m-1;j++,k++)
+        {
+            int temp;
+            temp=arr[k+1][i];
+            arr[k+1][i]=temp+arr[j][i];
+        }
+         arr1[i]=arr[m-1][i];
+    }
+    for(int i=0;i<n;i++)
+  cout<<arr1[i]<<" ";
+}
+
+
