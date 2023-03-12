@@ -1,0 +1,26 @@
+int arrayRotateCheck(int *input, int size)
+{
+    //Write your code here
+    int x;
+    if(input[1]>input[0])
+    {
+        int i=0;
+        while(i<size-1&&input[i+1]>input[i])
+        {
+            x=i+1;
+            i++;
+        }
+    }
+    else if(size<2)
+    {
+        if(size==0)
+        return size;
+        else
+        return size-1;
+            
+    }
+    if(input[x]==input[size-1])
+        return 0;
+    else
+        return x+1;
+}
