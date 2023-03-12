@@ -1,0 +1,36 @@
+int pairSum(int *input, int size, int x)
+{
+	//Write your code here
+     int a=0,w;
+    //if(size1<size2)
+    //{
+        for(int i=0;i<size;i++)
+        {
+            for(int j=0;j<size;j++)
+            {
+               // if(input[i]!=0&&input[i]!=x)
+                //{
+                if((input[i]+input[j])==x&&i!=j)
+                {
+                    w=input[i];
+                   // input[i]=0;
+                    a++;
+                  // break;
+                }
+               // }//
+              //  else
+              //  {
+              //      input[i]=x;
+              //  if((input[i]+input[j])==x&&i!=j)
+              //  {
+             //       input[i]=x;
+             //       a++;
+             //       break;
+            //    }
+             //   }
+                    
+            }
+            input[i]=-9999;
+        }
+    return a;
+}
