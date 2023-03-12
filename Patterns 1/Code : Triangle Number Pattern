@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+
+
+int main(){
+
+       /*  Read input as specified in the question.
+	* Print output as specified in the question.
+	*/
+      int n,i=1,j,k;
+    cin>>n;
+    while(i<=n)
+    {
+        j=1;
+        k=i;
+        while(j<=i)
+        {
+            cout<<k;
+            j++;
+        }
+        cout<<endl;
+            i++;
+        
+    }
+  
+}
+
+
