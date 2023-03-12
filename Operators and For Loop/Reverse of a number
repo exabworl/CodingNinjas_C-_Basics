@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+	// Write your code here
+	long int n;
+    cin>>n;
+    if(n==0)
+        cout<<n;
+    
+    for(;n!=0;n/=10)
+    {
+        if(n%10==0)
+    {
+        long int c=n%10;
+        if(n%10==0&&c==0)
+            continue;
+        cout<<c;
+        //n/=10;
+    }    
+    else
+    {
+        for(;n!=0;n/=10)
+    {
+        long int c=n%10;
+        cout<<c;
+    }
+    }
+    }
+    return 0;
+    
+}
