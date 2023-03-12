@@ -1,0 +1,52 @@
+void rotate(int *input, int d, int n)
+{
+    //Write your code here
+    int x=0,i,j=0,arr[1000],k;
+    for(i=0;i<n;i++)
+    {
+        if(d<n)
+        {
+            arr[i]=input[d];
+           d++;
+        }
+        else if(d>=n)
+        {
+            //k=0;
+            arr[i]=input[k];
+            
+            k++;
+        }
+    }
+    while(j<n)
+    {
+        input[j]=arr[j];
+        j++;
+    }
+    /*
+       int temp[n];
+ 
+    // Keepig track of the current index
+    // of temp[]
+    int k = 0;
+ 
+    // Storing the n - d elements of
+    // array arr[] to the front of temp[]
+    for (int i = d; i < n; i++) {
+        temp[k] = input[i];
+        k++;
+    }
+ 
+    // Storing the first d elements of array arr[]
+    //  into temp
+    for (int i = 0; i < d; i++) {
+        temp[k] = input[i];
+        k++;
+    }
+ 
+    // Copying the elements of temp[] in arr[]
+    // to get the final rotated array
+    for (int i = 0; i < n; i++) {
+        input[i] = temp[i];
+    }*/
+}
+   
