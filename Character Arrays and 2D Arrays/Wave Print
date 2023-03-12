@@ -1,0 +1,30 @@
+void wavePrint(int **input, int nRows, int mCols)
+{
+    //Write your code here
+      int m=nRows,n=mCols,arr1[m*n],max1=0,k1=0,max2=0,k2=0,arr[m][n];
+   int j=0,k=0;
+    for(int o=0;o<n;o++)
+    {
+   //    for(int i=o;i<o+1;i++)
+   // {
+        for(k=j;k<m;k++)
+        {
+            cout<<input[k][o]<<" ";
+        }
+           j=k;
+           o++;
+          // break;
+  //  }
+        
+    // for(int i=o;i<o+1;i++)
+   // {
+        for(k=j-1;k>=0&&o<n;k--)
+        {
+            cout<<input[k][o]<<" ";
+        }
+        j=0;
+        
+ //    }
+    }
+    
+}
